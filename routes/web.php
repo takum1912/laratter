@@ -6,7 +6,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\TweetController;
 use App\Http\Controllers\TweetLikeController;
 use App\Http\Controllers\UsersKeyController;
-use Illuminate\Support\Facades\Route;
+// use Illuminate\Support\Facades\Route;
 use Livewire\Volt\Volt;
 
 Route::get('/', function () {
@@ -24,7 +24,7 @@ Route::middleware(['auth'])->group(function () {
     Volt::route('settings/password', 'settings.password')->name('settings.password');
     Volt::route('settings/appearance', 'settings.appearance')->name('settings.appearance');
 
-    Route::post('/users/key', [UsersKeyController::class, 'update'])->name('users.key.update');
+    // Route::post('/users/key', [UsersKeyController::class, 'update'])->name('users.key.update');
     Route::get('/profile/{user}', [ProfileController::class, 'show'])->name('profile.show');
     Route::post('/follow/{user}', [FollowController::class, 'store'])->name('follow.store');
     Route::delete('/follow/{user}', [FollowController::class, 'destroy'])->name('follow.destroy');

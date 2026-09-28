@@ -7,13 +7,13 @@
       <p>アカウント作成日時: {{ $user->created_at->format('Y-m-d H:i') }}</p>
     </div>
 
-    <div class="mt-2">
+    <!-- <div class="mt-2">
       @if ($user->usersKey?->is_private)
         <p class="text-red-500">🔒 鍵アカウント</p>
       @else
         <p class="text-green-500">🔓 公開アカウント</p>
       @endif
-    </div>
+    </div> -->
 
     @if ($user->id !== auth()->id())
     <div class="mt-2">
